@@ -1,0 +1,31 @@
+.search-bar {
+    display: block;
+    margin-bottom: 10px;
+
+}
+
+.header {
+    display: flex;
+    height: 55px;
+
+}
+
+.left-section {
+    background-color: aqua;
+    width: 100px;
+
+}
+
+.middle-section {
+    background-color: pink;
+    display: flex;
+    flex: 1;
+    margin-right: 23px;
+    margin-left: 23px;
+}
+
+.right-section {
+    background-color: aqua;
+    width: 100px;
+
+}

@@ -1,6 +1,7 @@
 .header {
     display: flex;
     height: 55px;
+    z-index: 100;
     flex-direction: row;
     justify-content: space-between;
     position: fixed;
@@ -86,14 +87,78 @@
     margin-right: 10px;
 }
 
+.search-button,
+.voice-search-button,
+.upload-icon-container,
+.upload-menu-container,
+.notifications-icon-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.search-button .tooltip,
+.voice-search-button .tooltip,
+.upload-icon-container .tooltip,
+.upload-menu-container .tooltip,
+.notifications-icon-container .tooltip {
+    position: absolute;
+    background-color: grey;
+    color: black;
+    font-size: 12px;
+    bottom: -30px;
+    padding-left: 4px;
+    padding-right: 4px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    border-radius: 10%;
+    opacity: 0;
+    transition: opacity 0.15s;
+    pointer-events: none;
+    white-space: nowrap;
+}
+
+.search-button:hover .tooltip,
+.voice-search-button:hover .tooltip,
+.upload-icon-container:hover .tooltip,
+.upload-menu-container:hover .tooltip,
+.notifications-icon-container:hover .tooltip {
+    opacity: 1;
+}
+
 .right-section {
     width: 180px;
     display: flex;
     align-items: center;
     margin-right: 20px;
     justify-content: space-between;
-    display: flex;
     flex-shrink: 0;
+}
+
+.right-section :hover {
+    background-color: grey;
+}
+
+/* .notifications-icon-container {
+    position: relative;
+} */
+
+.notifications-icon-number {
+    background-color: rgb(200, 0, 0);
+    color: black;
+    position: absolute;
+    right: -5px;
+    top: -2px;
+    font-size: 12px;
+    border-radius: 10px;
+    border-style: none;
+    padding-left: 6px;
+    padding-right: 6px;
+    padding-bottom: 2px;
+    padding-top: 2px;
+    bottom: 12px;
+
 }
 
 .upload-icon {
